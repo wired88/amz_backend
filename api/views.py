@@ -13,7 +13,7 @@ class ContactAPIView(generics.CreateAPIView):
         serializer.is_valid(
             raise_exception=True)  # check if valid. if not, custom made error will be displayed(see serializer class)
         self.perform_create(serializer)  # create isntance in db
-        return JsonResponse({"successUrl": "http://localhost:5173/", "status": status.HTTP_201_CREATED})
+        return JsonResponse({"successUrl": "/", "status": status.HTTP_201_CREATED})
 
 
 """
