@@ -1,0 +1,57 @@
+
+
+ask = input("1 === vorhandene liste \n 2 === suchbegriff eingeben \n")
+if ask == "1":
+    with open("yourfile.txt", "r") as f:
+        amazon_list = json.load(f)
+        for product in amazon_list:
+            print(f"Titel: {product['title']}")
+            print(f"URL: {product['url']}")
+            partner_links = extract_partner_links(product)
+            if partner_links:
+                print("Partnerlinks:")
+                for link in partner_links:
+                    print(f"{link['description']}: {link['link']}")
+            else:
+                print("Keine Partnerlinks gefunden.")
+    print(amazon_list)
+
+
+
+
+
+"""
+with open("yourfile.txt", "r") as f:
+    amazon_list = json.load(f)
+    for product in amazon_list:
+        print(f"Titel: {product['title']}")
+        print(f"URL: {product['url']}")
+        partner_links = extract_partner_links(product)
+        if partner_links:
+            print("Partnerlinks:")
+            for link in partner_links:
+                print(f"{link['description']}: {link['link']}")
+        else:
+            print("Keine Partnerlinks gefunden.")
+print(amazon_list)
+
+query = input("Gib einen Suchbegriff ein: ")
+search_results = search_amazon(query)
+
+if search_results:
+    top_products = extract_top_products(search_results)
+    for i, product in enumerate(top_products):
+        print(f"\nProdukt {i + 1}:")
+        print(f"Titel: {product['title']}")
+        print(f"URL: {product['url']}")
+        partner_links = extract_partner_links(product)
+        if partner_links:
+            print("Partnerlinks:")
+            for link in partner_links:
+                print(f"{link['description']}: {link['link']}")
+        else:
+            print("Keine Partnerlinks gefunden.")
+
+"""
+
+
