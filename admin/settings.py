@@ -36,9 +36,12 @@ MIDDLEWARE = [
 
 CORS_ALLOWED_ORIGINS = [
     "http://127.0.0.1:8000",
+    "https://sales-detective.live",
+    "https://www.sales-detective.live",
+    "http://localhost:5173",
 ]
 
-CORS_ALLOW_ALL_ORIGINS = False
+CORS_ALLOW_ALL_ORIGINS = True
 
 ROOT_URLCONF = 'admin.urls'
 

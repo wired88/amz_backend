@@ -1,5 +1,6 @@
-from rest_framework import serializers
-
+from django.http import JsonResponse
+from rest_framework import serializers, status
+from rest_framework.response import Response
 from .models import *
 
 
@@ -41,3 +42,11 @@ class ContactSerializer(serializers.ModelSerializer):
         elif len(value) <= 20:
             raise serializers.ValidationError("A message should be at least 20 characters long")
         return value
+
+
+class CreateObjectsSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = AMZProduct
+        fields = "__all__"
+
+

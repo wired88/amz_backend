@@ -3,7 +3,9 @@ from .views import *
 
 app_name = "api"
 urlpatterns = [
-    path("contact/", ContactAPIView.as_view())
+    path("contact/", ContactAPIView.as_view()),
+    path("create-objects/", CreateObjectsAPIView.as_view()),
+
 ]
 
 
