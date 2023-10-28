@@ -49,7 +49,7 @@ phone_data = [
                         "GEMACHT, UM EINEN UNTERSCHIED ZU MACHEN – Das iPhone kommt mit Datenschutzfeatures, die dafür sorgen, dass du die Kontrolle über deine Daten behältst. Es besteht aus mehr recycelten Materialien, um die Umweltauswirkungen zu minimieren. Und es hat integrierte Features, die das iPhone für alle zugänglicher machen.\n "
                         "KOMMT MIT APPLECARE GARANTIE – Jedes iPhone kommt mit einer einjährigen Herstellergarantie und bis zu 90 Tagen kostenlosem technischen Support. Hol dir AppleCare+ oder AppleCare+ mit Diebstahl und Verlust, um deinen Schutz zu verlängern.\n "
     },
-    {---
+    {
         "title": "Apple iPhone 13 mini Plus (128GB) - Mitternacht",
         "url": "https://www.amazon.de/Apple-iPhone-Mini-128-GB-Mitternacht/dp/B09G9GH7KC?__mk_de_DE=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=ME1LXK8F05B6&keywords=iphone+13+mini&qid=1697874389&sprefix=iphone+13+mini%2Caps%2C126&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1&linkCode=ll1&tag=salesdetectiv-21&linkId=80fd7653522aa914dfb513ed8e565899&language=de_DE&ref_=as_li_ss_tl",
         "image":"https://m.media-amazon.com/images/I/61zqwVNO-sL._AC_SX679_.jpg",
@@ -115,8 +115,7 @@ phone_data = [
 ]
 
 # Loop through the phone data and add each phone dictionary to the list
-for phone in phone_data:
-    a =
+
 
 
 # Create an empty list to store gaming console dictionaries
