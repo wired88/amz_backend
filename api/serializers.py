@@ -47,4 +47,17 @@ class CreateObjectsSerializer(serializers.ModelSerializer):
         model = AMZProduct
         fields = "__all__"
 
+class ImageComponentrequeastSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ImageRequest
+        fields = "__all__"
+
+class TextComponentrequestSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ComponentCreateRequest
+        fields = "__all__"
+
+
+
+
 

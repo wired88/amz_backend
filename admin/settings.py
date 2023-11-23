@@ -9,6 +9,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["127.0.0.1"]
 
+OPENAI_API_KEY = "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"
 
 INSTALLED_APPS = [
     'django.contrib.admin',

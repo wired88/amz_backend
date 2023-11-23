@@ -1,5 +1,35 @@
+from django.core.exceptions import ValidationError
 from django.db import models
 from django.utils.translation import gettext_lazy as _
+
+
+def validate_image(file):
+    valid_extensions = ['jpg', 'png', 'jpeg']
+    if not file.name.endswith(tuple(f'.{ext}' for ext in valid_extensions)):
+        raise ValidationError(f'Ungültige Datei! Nur {", ".join(valid_extensions)} Dateien sind erlaubt.')
+
+
+class ImageRequest(models.Model):
+    image = models.FileField(
+        upload_to="media",
+        validators=[validate_image]
+    )
+    date = models.DateField(
+        auto_now_add=True
+    )
+
+
+class ComponentCreateRequest(models.Model):
+    input_field = models.TextField(
+        max_length=2000
+    )
+    response = models.TextField(
+        max_length=2000
+    )
+    date = models.DateField(
+        auto_now_add=True
+    )
+
 
 class Contact(models.Model):
     OPTIONS = (
